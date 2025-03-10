@@ -1,11 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import './Navbar.css' ;
+import "./Navbar.css";
 import Image from "next/image";
 import textLogo from "@/app/assests/icons/concrare-main-logo(white).png";
 import buildingLogo from "@/app/assests/icons/residential.png";
 import phoneLogo from "@/app/assests/icons/phone-digital-communication-tool.png";
 import menuLogo from "@/app/assests/icons/menu.png";
+import appartmentImage1 from "@/app/assests/images/gallery-thumb01.jpg";
+import appartmentImage2 from "@/app/assests/images/gallery-thumb02.jpg";
+import appartmentImage3 from "@/app/assests/images/gallery-thumb03.jpg";
+import socialmedia1 from "@/app/assests/icons/facebook.png";
+import socialmedia2 from "@/app/assests/icons/instagram.png";
+import socialmedia3 from "@/app/assests/icons/linkedin.png";
 import { Playfair_Display, Poppins } from "next/font/google";
 import { IoMdArrowDropdown } from "react-icons/io";
 
@@ -16,7 +22,7 @@ const playfair = Playfair_Display({
 });
 
 const poppins = Poppins({
-  weight: ["300", "400","600", "700", "900"],
+  weight: ["300", "400", "600", "700", "900"],
   subsets: ["latin"],
   preload: true,
 });
@@ -96,44 +102,128 @@ const Navbar = () => {
               </div>
             </section>
           </div>
-          <hr  className="my-3 opacity-40"/>
+          <hr className="my-3 opacity-40" />
           {/* nav ul  */}
           <div>
-<ul className="flex justify-end gap-10 py-2">
-    <li>Home</li>
-    <li>About</li>
-    <li 
-    onClick={togglelargeNavli} 
-    className="flex items-center gap-1 relative group">
-        Project <IoMdArrowDropdown />
-        </li>
-        {
-            largenavli ? 
-<div className="absolute top-32 right-[450px]">
-<p className="relative bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center mt-5 leading-10">
-<span className="absolute -top-2 right-4 w-4 h-4 bg-gray-900 rotate-45"></span>
-   <ul>
-    <li>Residential</li>
-    <li>Collections</li>
-    <li>Commercial</li>
-    <li>For Rental</li>
-   </ul>
-</p>
-</div>
-: <></>
-        }
-    <li>Contact</li>
-</ul>
+            <ul className="flex justify-end gap-10 py-2">
+              <li>Home</li>
+              <li>About</li>
+              <li
+                onClick={togglelargeNavli}
+                className="flex items-center gap-1 relative group"
+              >
+                Project <IoMdArrowDropdown />
+              </li>
+              {largenavli ? (
+                <div className="absolute top-32 ">
+                  <p className="relative bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center mt-5 leading-10">
+                    <span className="absolute -top-2 left-4 w-4 h-4 bg-gray-900 rotate-45"></span>
+                    <ul>
+                      <li>Residential</li>
+                      <li>Collections</li>
+                      <li>Commercial</li>
+                      <li>For Rental</li>
+                    </ul>
+                  </p>
+                </div>
+              ) : (
+                <></>
+              )}
+              <li>Contact</li>
+            </ul>
           </div>
-
         </div>
       </div>
       {/*   SideBar */}
-      <div className={`fixed top-0 left-0 h-full w-[350px] bg-white shadow-md shadow-[#F26626] transform transition-transform duration-300 ease-in-out ${viewSidebar ? "translate-x-0" : "-translate-x-full"} z-50`}>
-       
+      <div
+        className={`fixed top-0 left-0 h-full w-[350px] bg-white shadow-md shadow-[#F26626] transform transition-transform duration-300 ease-in-out ${
+          viewSidebar ? "translate-x-0" : "-translate-x-full"
+        } z-50`}
+      >
         {viewSidebar ? (
-          <div className=" bg-[#1C1C44] w-[350px] shadow-md shadow-[#CFAF6E] h-screen z-10 transition ease-in duration-700 ">
-            
+          <div className=" bg-[#1C1C44] w-[350px] shadow-md shadow-[#CFAF6E] h-screen z-10 transition ease-in duration-700 flex px-6 items-center">
+            <div>
+              {/* main icon section  */}
+              <div className={`${playfair.className} flex items-center gap-1`}>
+                <p className="">
+                  <Image
+                    src={buildingLogo}
+                    alt="building logo"
+                    className="w-[60px]"
+                  />
+                </p>
+                <p className="relative ">
+                  <span>
+                    <Image
+                      src={textLogo}
+                      alt="building logo"
+                      className="relative w-[150px]"
+                    />
+                  </span>
+                  <span className="absolute top-8 ms-2 text-white">
+                    Creative Houses
+                  </span>
+                </p>
+              </div>
+              <p className="my-5 text-sm">
+                By aiming to take the life quality to an upper level with the
+                whole realized Projects, Homepark continues to be the address of
+                luxury.
+              </p>
+              <div className="flex justify-between">
+                <Image
+                  className="w-24"
+                  src={appartmentImage1}
+                  alt="building thumbnails"
+                />
+                <Image
+                  className="w-24"
+                  src={appartmentImage2}
+                  alt="building thumbnails"
+                />
+                <Image
+                  className="w-24"
+                  src={appartmentImage3}
+                  alt="building thumbnails"
+                />
+              </div>
+              <p className="my-5 text-sm">
+                Kyiv | G. Stalingrada Avenue, 6 Vilnius | Antakalnio St. 17
+              </p>
+              <p>
+                <span className=" font-bold text-lg text-white">
+                  +380(98)298-59-73
+                </span>{" "}
+                <br />
+                <span className=" text-sm text-white">hello@concrare.com</span>
+              </p>
+              <div className="flex  gap-2 my-8">
+                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                  <Image
+                    className="w-4 "
+                    src={socialmedia1}
+                    alt="social media logo"
+                  />
+                </span>{" "}
+                <br />
+                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                  <Image
+                    className="w-4"
+                    src={socialmedia2}
+                    alt="social media logo"
+                  />
+                </span>{" "}
+                <br />
+                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                  <Image
+                    className="w-4"
+                    src={socialmedia3}
+                    alt="social media logo"
+                  />
+                </span>
+              </div>
+              <p className="text-xs">© 2019 Concrare | Real Estate & Luxury Homes</p>
+            </div>
           </div>
         ) : (
           <></>
