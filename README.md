@@ -1,4 +1,4 @@
-sample weblink: https://mysanmar.com/
+* sample weblink: https://mysanmar.com/
 
 
 * Luxury & Premium -------
@@ -8,8 +8,24 @@ sample weblink: https://mysanmar.com/
 • Background: Pure White (#FFFFFF) – Premium & Spacious
 
 
+https://ui.aceternity.com/
 
+image slider: https://ui.aceternity.com/components/images-slider 
 
+<!--  --------------------- font section ----------------------------- -->
+import { Playfair_Display, Poppins } from "next/font/google";
 
+const playfair = Playfair_Display ({
+   weight: [ "400", "900"],
+    subsets: ["latin"],
+     preload: true, 
+});
 
+const poppins = Poppins({
+   weight: ["300", "400", "700", "900"], 
+   subsets: ["latin"],
+    preload: true, 
+});
+
+{`${playfair.className} ${poppins.className}`}
 
