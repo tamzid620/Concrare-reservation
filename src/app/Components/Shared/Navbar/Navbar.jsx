@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import './Navbar.css' ;
 import Image from "next/image";
 import textLogo from "@/app/assests/icons/concrare-main-logo(white).png";
 import buildingLogo from "@/app/assests/icons/residential.png";
 import phoneLogo from "@/app/assests/icons/phone-digital-communication-tool.png";
 import menuLogo from "@/app/assests/icons/menu.png";
 import { Playfair_Display, Poppins } from "next/font/google";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const playfair = Playfair_Display({
   weight: ["400", "900"],
@@ -14,20 +16,25 @@ const playfair = Playfair_Display({
 });
 
 const poppins = Poppins({
-  weight: ["300", "400", "700", "900"],
+  weight: ["300", "400","600", "700", "900"],
   subsets: ["latin"],
   preload: true,
 });
 
 const Navbar = () => {
   const [viewSidebar, setViewSidebar] = useState(false);
+  const [largenavli, setLargenavli] = useState(false);
+
   const toggleSidebar = () => {
     setViewSidebar(!viewSidebar);
+  };
+  const togglelargeNavli = () => {
+    setLargenavli(!largenavli);
   };
 
   return (
     <nav className={` ${poppins.className} `}>
-      <div className="lg:max-w-7xl md:max-w-3xl sm: max-w-sm mx-auto bg-[#CFAF6E]">
+      <div className="lg:max-w-7xl md:max-w-3xl sm: max-w-sm mx-auto ">
         {/* large and medium device ------------------------------------------- */}
         <div className="lg:block md:block sm: hidden px-3 py-4">
           <div className="flex justify-between items-center">
@@ -90,9 +97,35 @@ const Navbar = () => {
             </section>
           </div>
           <hr  className="my-3 opacity-40"/>
+          {/* nav ul  */}
           <div>
-            
+<ul className="flex justify-end gap-10 py-2">
+    <li>Home</li>
+    <li>About</li>
+    <li 
+    onClick={togglelargeNavli} 
+    className="flex items-center gap-1 relative group">
+        Project <IoMdArrowDropdown />
+        </li>
+        {
+            largenavli ? 
+<div className="absolute top-32 right-[450px]">
+<p className="relative bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center mt-5 leading-10">
+<span className="absolute -top-2 right-4 w-4 h-4 bg-gray-900 rotate-45"></span>
+   <ul>
+    <li>Residential</li>
+    <li>Collections</li>
+    <li>Commercial</li>
+    <li>For Rental</li>
+   </ul>
+</p>
+</div>
+: <></>
+        }
+    <li>Contact</li>
+</ul>
           </div>
+
         </div>
       </div>
       {/*   SideBar */}
