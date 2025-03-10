@@ -30,12 +30,16 @@ const poppins = Poppins({
 const Navbar = () => {
   const [viewSidebar, setViewSidebar] = useState(false);
   const [largenavli, setLargenavli] = useState(false);
+  const [smallnavli, setSmallnavli] = useState(false);
 
   const toggleSidebar = () => {
     setViewSidebar(!viewSidebar);
   };
-  const togglelargeNavli = () => {
+  const toggleLargeNavli = () => {
     setLargenavli(!largenavli);
+  };
+  const toggleSmallNavli = () => {
+    setSmallnavli(!smallnavli);
   };
 
   return (
@@ -109,7 +113,7 @@ const Navbar = () => {
               <li>Home</li>
               <li>About</li>
               <li
-                onClick={togglelargeNavli}
+                onClick={toggleLargeNavli}
                 className="flex items-center gap-1 relative group"
               >
                 Project <IoMdArrowDropdown />
@@ -171,7 +175,7 @@ const Navbar = () => {
             </div>
         </div>
       </div>
-      {/* SideBar */}
+      {/* SideBar-------------------------------------------- */}
       <div
         className={`fixed top-0 left-0 h-full w-[350px] bg-white shadow-md shadow-[#F26626] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
@@ -271,12 +275,12 @@ const Navbar = () => {
               <li>Home</li>
               <li>About</li>
               <li
-                onClick={togglelargeNavli}
+                onClick={toggleSmallNavli}
                 className="flex items-center gap-1 relative group"
               >
                 Project <IoMdArrowDropdown />
               </li>
-              {largenavli ? (
+              {smallnavli ? (
                 <div className="bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center leading-10">
                     <ul>
                       <li>Residential</li>
