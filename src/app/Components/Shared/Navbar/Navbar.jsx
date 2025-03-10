@@ -40,9 +40,9 @@ const Navbar = () => {
 
   return (
     <nav className={` ${poppins.className} `}>
-      <div className="lg:max-w-7xl md:max-w-3xl sm: max-w-sm mx-auto ">
+      <div className="lg:max-w-7xl md:max-w-full sm: max-w-full mx-auto ">
         {/* large and medium device ------------------------------------------- */}
-        <div className="lg:block md:block sm: hidden px-3 py-4">
+        <div className=" md:block sm: hidden px-3 py-4">
           <div className="flex justify-between items-center">
             <section>
               {/* main icon section  */}
@@ -133,16 +133,54 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+        {/* small device  */}
+        <div className="md:hidden sm: block px-3 py-3">
+            <div className="flex justify-between items-center">
+{/* main icon section  */}
+<div className={`${playfair.className} flex items-center gap-0`}>
+                <p className="">
+                  <Image
+                    src={buildingLogo}
+                    alt="building logo"
+                    className="w-[50px]"
+                  />
+                </p>
+                <p className="relative ">
+                  <span>
+                    <Image
+                      src={textLogo}
+                      alt="building logo"
+                      className="relative w-[100px]"
+                    />
+                  </span>
+                  <span className="absolute top-5 ms-2 text-xs text-white">
+                    Creative Houses
+                  </span>
+                </p>
+              </div>
+{/* menu button  */}
+{/* menu icon  */}
+<div>
+                <Image
+                  onClick={toggleSidebar}
+                  src={menuLogo}
+                  alt="building logo"
+                  className="w-[30px] pt-3"
+                />
+              </div>
+            </div>
+        </div>
       </div>
-      {/*   SideBar */}
+      {/* SideBar */}
       <div
         className={`fixed top-0 left-0 h-full w-[350px] bg-white shadow-md shadow-[#F26626] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
         } z-50`}
       >
         {viewSidebar ? (
-          <div className=" bg-[#1C1C44] w-[350px] shadow-md shadow-[#CFAF6E] h-screen z-10 transition ease-in duration-700 flex px-6 items-center">
-            <div>
+          <div className=" bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] h-screen z-10 transition ease-in duration-700 flex px-6 items-center">
+            {/* large and medium device sidebar  */}
+            <div className="md:block sm: hidden">
               {/* main icon section  */}
               <div className={`${playfair.className} flex items-center gap-1`}>
                 <p className="">
@@ -198,7 +236,7 @@ const Navbar = () => {
                 <span className=" text-sm text-white">hello@concrare.com</span>
               </p>
               <div className="flex  gap-2 my-8">
-                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                <span className="p-2 bg-gray-700 hover:bg-[#CFAF6E]">
                   <Image
                     className="w-4 "
                     src={socialmedia1}
@@ -206,7 +244,7 @@ const Navbar = () => {
                   />
                 </span>{" "}
                 <br />
-                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                <span className="p-2 bg-gray-700 hover:bg-[#CFAF6E]">
                   <Image
                     className="w-4"
                     src={socialmedia2}
@@ -214,7 +252,7 @@ const Navbar = () => {
                   />
                 </span>{" "}
                 <br />
-                <span className="p-2 bg-gray-900 hover:bg-[#CFAF6E]">
+                <span className="p-2 bg-gray-700 hover:bg-[#CFAF6E]">
                   <Image
                     className="w-4"
                     src={socialmedia3}
@@ -223,6 +261,36 @@ const Navbar = () => {
                 </span>
               </div>
               <p className="text-xs">© 2019 Concrare | Real Estate & Luxury Homes</p>
+            </div>
+            {/* small device sidebar  */}
+            <div>
+{/* .................in progress........................... */}
+{/* nav ul  */}
+<div className="md:hidden sm: block">
+            <ul className="leading-[50px] py-2 sidebar-ul">
+              <li>Home</li>
+              <li>About</li>
+              <li
+                onClick={togglelargeNavli}
+                className="flex items-center gap-1 relative group"
+              >
+                Project <IoMdArrowDropdown />
+              </li>
+              {largenavli ? (
+                <div className="bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center leading-10">
+                    <ul>
+                      <li>Residential</li>
+                      <li>Collections</li>
+                      <li>Commercial</li>
+                      <li>For Rental</li>
+                    </ul>
+                </div>
+              ) : (
+                <></>
+              )}
+              <li>Contact</li>
+            </ul>
+          </div>
             </div>
           </div>
         ) : (

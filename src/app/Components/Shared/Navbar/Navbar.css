@@ -6,3 +6,6 @@ ul li{
 ul li:hover{
     color: #CFAF6E ;
 }
+.sidebar-ul li {
+    font-size: 18px;
+}
