@@ -1,14 +1,7 @@
 
+import Footer from "../Components/Shared/UserShared/Footer/Footer";
+import Navbar from "../Components/Shared/UserShared/Navbar/Navbar";
 import "../globals.css";
-import Navbar from "../Components/Shared/Navbar/Navbar";
-import Footer from "../Components/Shared/Footer/Footer";
-
-
-
-export const metadata = {
-  title: "Concrare",
-  description: "Developed by marketien",
-};
 
 export default function RootLayout({ children }) {
   return (

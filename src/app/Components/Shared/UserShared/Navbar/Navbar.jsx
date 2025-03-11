@@ -43,8 +43,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={` ${poppins.className} `}>
-      <div className="lg:max-w-7xl md:max-w-full sm: max-w-full mx-auto ">
+    <nav className={` ${poppins.className} relative z-10 text-white`}>
+      <div className="relative lg:max-w-7xl md:max-w-full sm: max-w-full mx-auto ">
         {/* large and medium device ------------------------------------------- */}
         <div className=" md:block sm: hidden px-3 py-4">
           <div className="flex justify-between items-center">
@@ -268,7 +268,6 @@ const Navbar = () => {
             </div>
             {/* small device sidebar  */}
             <div>
-{/* .................in progress........................... */}
 {/* nav ul  */}
 <div className="md:hidden sm: block">
             <ul className="leading-[50px] py-2 sidebar-ul">

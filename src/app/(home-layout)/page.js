@@ -1,9 +1,18 @@
 import Image from "next/image";
+import Banner from "../Components/Shared/UserShared/Banner/Banner";
 
-export default function Home() {
+
+export const metadata = {
+  title: "Home || Concrare",
+  description: "Developed by marketien",
+};
+
+const Home = () => {
   return (
     <div className="">
-        <h2>Home</h2>
+<Banner/>
     </div>
   );
 }
+
+export default Home;

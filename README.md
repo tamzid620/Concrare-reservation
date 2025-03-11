@@ -1,4 +1,4 @@
-* sample weblink: https://mysanmar.com/
+* sample weblink: https://mysanmar.com/ , https://themezinho.net/hompark/?storefront=envato-elements#
 
 
 * Luxury & Premium -------
@@ -7,10 +7,6 @@
 • Accent: Crimson Red (#D72638) – Power & Action
 • Background: Pure White (#FFFFFF) – Premium & Spacious
 
-
-https://ui.aceternity.com/
-
-image slider: https://ui.aceternity.com/components/images-slider 
 
 <!--  --------------------- font section ----------------------------- -->
 import { Playfair_Display, Poppins } from "next/font/google";
@@ -28,4 +24,10 @@ const poppins = Poppins({
 });
 
 {`${playfair.className} ${poppins.className}`}
+
+
+
+*  https://ui.aceternity.com/
+
+*  image slider: https://ui.aceternity.com/components/images-slider 
 
