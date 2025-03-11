@@ -6,7 +6,7 @@
 • Secondary: Champagne Gold (#CFAF6E) – High-End Appeal
 • Accent: Crimson Red (#D72638) – Power & Action
 • Background: Pure White (#FFFFFF) – Premium & Spacious
-
+• Body background color : #cfaf6e1e
 
 <!--  --------------------- font section ----------------------------- -->
 import { Playfair_Display, Poppins } from "next/font/google";

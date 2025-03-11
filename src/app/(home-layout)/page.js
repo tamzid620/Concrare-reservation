@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Banner from "../Components/Shared/UserShared/Banner/Banner";
+import OurProject from "../Components/Shared/UserShared/OurProject/OurProject";
 
 
 export const metadata = {
@@ -9,9 +10,10 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <div className="-mt-[160px]">
-<Banner/>
-    </div>
+    <main className="-mt-[160px]">
+      <Banner />
+      <OurProject/>
+    </main>
   );
 }
 

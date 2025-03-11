@@ -12,8 +12,8 @@ import appartmentImage3 from "@/app/assests/images/gallery-thumb03.jpg";
 import socialmedia1 from "@/app/assests/icons/facebook.png";
 import socialmedia2 from "@/app/assests/icons/instagram.png";
 import socialmedia3 from "@/app/assests/icons/linkedin.png";
-import { Playfair_Display, Poppins } from "next/font/google";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { Playfair_Display, Poppins } from "next/font/google";
 
 const playfair = Playfair_Display({
   weight: ["400", "900"],
@@ -101,7 +101,7 @@ const Navbar = () => {
                   onClick={toggleSidebar}
                   src={menuLogo}
                   alt="building logo"
-                  className="w-[30px] pt-3"
+                  className="w-[30px] pt-3 shadow-[#CFAF6E] hover:shadow-lg"
                 />
               </div>
             </section>
@@ -169,20 +169,20 @@ const Navbar = () => {
                   onClick={toggleSidebar}
                   src={menuLogo}
                   alt="building logo"
-                  className="w-[30px] pt-3"
+                  className="w-[30px] pt-3 shadow-[#CFAF6E] hover:shadow-lg"
                 />
               </div>
             </div>
         </div>
       </div>
       {/* SideBar-------------------------------------------- */}
-      <div
-        className={`fixed top-0 left-0 h-full w-[350px] bg-white shadow-md shadow-[#F26626] transform transition-transform duration-300 ease-in-out ${
+      <aside
+        className={`fixed top-0 left-0 h-full bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
         } z-50`}
       >
         {viewSidebar ? (
-          <div className=" bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] h-screen z-10 transition ease-in duration-700 flex px-6 items-center">
+          <div className="  w-[350px] shadow-md h-screen z-10 transition ease-in duration-700 flex px-6 items-center">
             {/* large and medium device sidebar  */}
             <div className="md:block sm: hidden">
               {/* main icon section  */}
@@ -299,7 +299,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
-      </div>
+      </aside>
     </nav>
   );
 };

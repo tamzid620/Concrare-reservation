@@ -2,6 +2,20 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ImagesSlider } from "@/components/ui/images-slider";
+import { Playfair_Display, Poppins } from "next/font/google";
+
+const playfair = Playfair_Display({
+  weight: ["400", "900"],
+  subsets: ["latin"],
+  preload: true,
+});
+
+const poppins = Poppins({
+  weight: ["300", "400", "600", "700", "900"],
+  subsets: ["latin"],
+  preload: true,
+});
+
 
 const slides = [
   {
@@ -45,12 +59,12 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 80 }}
           transition={{ duration: 0.6 }}
-          className="z-50 flex flex-col justify-center items-center text-white uppercase"
+          className={` ${poppins.className} z-50 flex flex-col justify-center items-center text-white uppercase`}
         >
-          <motion.h1 className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4 mt-64">
+          <motion.h1 className="font-bold  md:text-6xl sm: text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-600 py-4 mt-64">
             {slides[index].title}
           </motion.h1>
-          <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          <motion.p className="font-bold md:text-6xl sm: text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-neutral-50 py-4 -mt-7">
             {slides[index].subtitle}
           </motion.p>
         </motion.div>
