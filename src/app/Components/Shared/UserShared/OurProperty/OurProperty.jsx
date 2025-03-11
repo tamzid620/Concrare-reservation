@@ -1,3 +1,4 @@
+'use client' ;
 import React from "react";
 import icon1 from "@/app/assests/icons/icon-benefits01.png";
 import icon2 from "@/app/assests/icons/icon-benefits02.png";
@@ -6,6 +7,7 @@ import icon4 from "@/app/assests/icons/icon-benefits04.png";
 import icon5 from "@/app/assests/icons/icon-benefits05.png";
 import { playfair, poppins } from "@/config/fonts";
 import Image from "next/image";
+import CountUp from "react-countup";
 
 const propertyData = [
   {
@@ -60,7 +62,7 @@ const OurProperty = () => {
               </div>
               <h1 className="font-bold mb-2">Near to Subway</h1>
               <p>
-                <span className="font-bold text-5xl">28</span>
+                <span className="font-bold text-5xl"><CountUp start={0} end={28} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>min</sub>
                 </span>
@@ -73,7 +75,7 @@ const OurProperty = () => {
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
               <p>
-                <span className="font-bold text-5xl">32</span>
+                <span className="font-bold text-5xl"><CountUp start={0} end={32} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-4xl">
                   <sub>+</sub>
                 </span>
@@ -86,7 +88,7 @@ const OurProperty = () => {
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
               <p>
-                <span className="font-bold text-5xl">15</span>
+                <span className="font-bold text-5xl"><CountUp start={0} end={15} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-3xl">
                   <sub>%</sub>
                 </span>
@@ -99,7 +101,7 @@ const OurProperty = () => {
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
               <p>
-                <span className="font-bold text-5xl">3</span>
+                <span className="font-bold text-5xl"><CountUp start={0} end={3} delay={1} duration={1.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>years</sub>
                 </span>
@@ -112,7 +114,7 @@ const OurProperty = () => {
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
               <p>
-                <span className="font-bold text-5xl">79</span>
+                <span className="font-bold text-5xl"><CountUp start={0} end={79} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>
                     m <sup>2</sup>
