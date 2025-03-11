@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ImagesSlider } from "@/components/ui/images-slider";
-import { playfair, poppins } from "@/app/styles/fonts";
+import { playfair, poppins } from "@/config/fonts";
 
 
 const slides = [

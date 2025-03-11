@@ -13,7 +13,7 @@ import socialmedia1 from "@/app/assests/icons/facebook.png";
 import socialmedia2 from "@/app/assests/icons/instagram.png";
 import socialmedia3 from "@/app/assests/icons/linkedin.png";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { playfair, poppins } from "@/app/styles/fonts";
+import { playfair, poppins } from "@/config/fonts";
 
 const Navbar = () => {
   const [viewSidebar, setViewSidebar] = useState(false);

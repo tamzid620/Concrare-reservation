@@ -3,7 +3,7 @@ import sidePattern from "@/app/assests/images/side-pattern-bg-short.png";
 import sideImage from "@/app/assests/images/side-image01.jpg";
 import m2Icon from "@/app/assests/icons/icon-m2.png";
 import Image from "next/image";
-import { playfair, poppins } from "@/app/styles/fonts";
+import { playfair, poppins } from "@/config/fonts";
 
 
 const OurProject = () => {
