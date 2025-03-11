@@ -9,7 +9,7 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="-mt-[160px]">
 <Banner/>
     </div>
   );
