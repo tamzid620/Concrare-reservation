@@ -2,19 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ImagesSlider } from "@/components/ui/images-slider";
-import { Playfair_Display, Poppins } from "next/font/google";
-
-const playfair = Playfair_Display({
-  weight: ["400", "900"],
-  subsets: ["latin"],
-  preload: true,
-});
-
-const poppins = Poppins({
-  weight: ["300", "400", "600", "700", "900"],
-  subsets: ["latin"],
-  preload: true,
-});
+import { playfair, poppins } from "@/app/styles/fonts";
 
 
 const slides = [

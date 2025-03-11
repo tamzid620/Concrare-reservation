@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Banner from "../Components/Shared/UserShared/Banner/Banner";
 import OurProject from "../Components/Shared/UserShared/OurProject/OurProject";
 

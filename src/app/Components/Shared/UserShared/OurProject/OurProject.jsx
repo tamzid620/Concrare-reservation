@@ -1,22 +1,9 @@
 import React from "react";
-import sidePattern from "@/app/assests/images/side-pattern-bg.png";
-import sidePattern1 from "@/app/assests/images/side-pattern-bg-short.png";
+import sidePattern from "@/app/assests/images/side-pattern-bg-short.png";
 import sideImage from "@/app/assests/images/side-image01.jpg";
 import m2Icon from "@/app/assests/icons/icon-m2.png";
 import Image from "next/image";
-import { Playfair_Display, Poppins } from "next/font/google";
-
-const playfair = Playfair_Display ({
-   weight: [ "400", "900"],
-    subsets: ["latin"],
-     preload: true, 
-});
-
-const poppins = Poppins({
-   weight: ["300", "400", "700", "900"], 
-   subsets: ["latin"],
-    preload: true, 
-});
+import { playfair, poppins } from "@/app/styles/fonts";
 
 
 const OurProject = () => {
@@ -26,7 +13,7 @@ const OurProject = () => {
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm: grid-cols-1 items-center gap-10">
         <section className="relative">
           <Image
-            src={sidePattern1}
+            src={sidePattern}
             alt="side pattern background"
             className="bg-[#CFAF6E] relative "
           />
@@ -36,7 +23,7 @@ const OurProject = () => {
             className="absolute lg:-top-20 md:top-0 sm: top-0 lg:left-20 shadow-2xl"
           />
         </section>
-        <section className={`${playfair.className} ${poppins.className}`}>
+        <section className={` ${poppins.className} `}>
             <h1 className={`${playfair.className} text-4xl mb-4 `}> <span className="text-[#CFAF6E]">Concrare</span> Construction LLC</h1>
             <h2 className="mb-5 font-semibold text-2xl">Living spaces for creative peoples</h2>
             <p>The smaller male cones release pollen, <br /> which fertilizes the female</p>

@@ -13,19 +13,7 @@ import socialmedia1 from "@/app/assests/icons/facebook.png";
 import socialmedia2 from "@/app/assests/icons/instagram.png";
 import socialmedia3 from "@/app/assests/icons/linkedin.png";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Playfair_Display, Poppins } from "next/font/google";
-
-const playfair = Playfair_Display({
-  weight: ["400", "900"],
-  subsets: ["latin"],
-  preload: true,
-});
-
-const poppins = Poppins({
-  weight: ["300", "400", "600", "700", "900"],
-  subsets: ["latin"],
-  preload: true,
-});
+import { playfair, poppins } from "@/app/styles/fonts";
 
 const Navbar = () => {
   const [viewSidebar, setViewSidebar] = useState(false);
