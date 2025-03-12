@@ -1,4 +1,5 @@
 import Banner from "../Components/Shared/UserShared/Banner/Banner";
+import OurExcellence from "../Components/Shared/UserShared/OurExcellence/OurExcellence";
 import OurGallery from "../Components/Shared/UserShared/OurGallery/OurGallery";
 import OurProject from "../Components/Shared/UserShared/OurProject/OurProject";
 import OurProperty from "../Components/Shared/UserShared/OurProperty/OurProperty";
@@ -18,6 +19,7 @@ const Home = () => {
       <OurProperty/>
       <OurGallery/>
       <OurVIsion/>
+      <OurExcellence/>
     </main>
   );
 }
