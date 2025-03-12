@@ -8,7 +8,7 @@ import { playfair, poppins } from "@/config/fonts";
 
 const OurGallery = () => {
   return (
-    <div className="pt-44 pb-28 ">
+    <div className="pt-44 pb-28 bg-white">
       <div className="lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm: grid-cols-1 items-center gap-10">
           <section className={` ${poppins.className} `}>
