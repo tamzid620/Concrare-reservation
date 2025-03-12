@@ -44,7 +44,7 @@ const propertyData = [
 
 const OurProperty = () => {
   return (
-    <div className="bg-gray-100 pt-32 pb-20 ">
+    <div className="bg-gray-100 py-32 ">
       <div className="lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4">
         <div className={` ${poppins.className} text-center`}>
           <h1 className={`${playfair.className} text-4xl mb-4 `}>
