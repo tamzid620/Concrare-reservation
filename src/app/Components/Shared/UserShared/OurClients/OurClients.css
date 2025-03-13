@@ -132,34 +132,44 @@
     width: 80px;
   }
 }
+/* ------------ medium device --------------------- */
 @media (max-width: 850px) {
-    
+  .main {
+    width: 768px;
+    margin-left: -81px;
+  }
   .hero {
     position: absolute;
     top: 0;
-    right: 80px;
+    right: 60px;
   }
   .content {
     position: absolute;
-    left: 5px;
+    left: 35px;
     top: 50%;
     width: 425px;
   }
 }
-
+/* ------------ small device --------------------- */
 @media (max-width: 550px) {
-    
+  .main {
+    /* width: 800px; */
+    width: 375px;
+    /* background-color: black !important; */
+    margin-left: 0px;
+  }
     .hero {
         position: absolute;
         top: 200px;
-        right: 230px;
-        width: 150px;
+        /* right: 435px; */
+        left: 160px;
+        width: 200px;
         height: 200px;
         z-index: 10;
       }
       .content {
         position: absolute;
-        left: 230px;
+        /* left: 230px; */
         top: 50%;
         width: 340px;
       }
