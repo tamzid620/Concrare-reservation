@@ -39,6 +39,7 @@ const OurCertificates = () => {
           <section className="lg:w-5/4 lg:-ms-40 md:ms-0 grid lg:grid-cols-4 md:grid-cols-2 sm: grid-cols-1 gap-3">
             {certificatedata.map(({ img }, index) => (
               <Image
+              key={index}
                 src={img}
                 alt="certificate image"
                 className=" bg-[#CFAF6E]"
