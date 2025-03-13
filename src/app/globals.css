@@ -45,6 +45,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-image: url('../app/assests/images/dyning-area.jpg');
   background-attachment: fixed;

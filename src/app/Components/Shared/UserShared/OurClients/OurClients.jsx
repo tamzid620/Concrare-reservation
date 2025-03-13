@@ -67,7 +67,7 @@ const OurClients = () => {
                   <div className="slide-col" key={index}>
                     <div className="content">
                       <p>{client.text}</p>
-                      <h2>{client.name}</h2>
+                      <h2 className={`${playfair.className} `}>{client.name}</h2>
                       <p>{client.role}</p>
                     </div>
                     <div className="hero">
