@@ -44,13 +44,14 @@ const OurCertificates = () => {
           <div className="flex justify-center md:mt-10 sm: mt-10">
           <section className="lg:w-5/4 lg:-ms-40 md:ms-0 grid lg:grid-cols-4 md:grid-cols-2 sm: grid-cols-1 gap-3">
             {certificatedata.map(({ img }, index) => (
-              <Image
-              key={index}
-              data-aos="fade-left" data-aos-duration="2000"
-                src={img}
-                alt="certificate image"
-                className=" bg-[#CFAF6E]"
-              />
+              <div key={index}>
+                <Image
+                data-aos="zoom-in" data-aos-duration="2000"
+                  src={img}
+                  alt="certificate image"
+                  className=" bg-[#CFAF6E]"
+                />
+              </div>
             ))}
           </section>
         </div>

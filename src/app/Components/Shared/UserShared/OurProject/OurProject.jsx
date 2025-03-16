@@ -32,7 +32,7 @@ const OurProject = () => {
           />
         </section>
         <section className={` ${poppins.className} `}>
-          <div data-aos="fade-left" data-aos-duration="1800">
+          <div data-aos="zoom-in" data-aos-duration="1800">
             <h1 className={`${playfair.className} text-4xl mb-4 `}> <span className="text-[#CFAF6E]">Concrare</span> Construction LLC</h1>
             <h2 className="mb-5 font-semibold text-2xl">Living spaces for creative peoples</h2>
             <p>The smaller male cones release pollen, <br /> which fertilizes the female</p>
