@@ -24,7 +24,7 @@ const OurCertificates = () => {
   ];
 
   return (
-    <div className="pt-44 pb-28 bg-gray-100">
+    <div className="pt-44 lg:pb-48 md:pb-28 sm: pb-28 bg-gray-100">
       <div className=" lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4 ">
         <div
           className={` ${poppins.className} grid lg:grid-cols-2 md:grid-cols-1 sm: grid-cols-1 items-center `}

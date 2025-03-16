@@ -31,9 +31,9 @@ const OurBasicInfo = () => {
 
 
   return (
-    <div className="bg-white py-24 ">
+    <div className="bg-white pb-16 lg:hidden md:block sm: block">
       <div
-        className={` ${poppins.className} bg-[#CFAF6E] py-10 px-6 lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
+        className={` ${poppins.className} bg-[#CFAF6E] py-12 px-6 lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
       >
         <div className="grid justify-center lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-10">
             {
