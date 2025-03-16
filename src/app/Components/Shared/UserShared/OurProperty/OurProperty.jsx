@@ -63,12 +63,12 @@ const OurProperty = () => {
           </h2>
           <div className="grid lg:grid-cols-5 md:grid-cols-3 sm: grid-cols-1 gap-20 mt-16">
             {/* icon section 1 */}
-            <section data-aos="fade-up" data-aos-duration="1200">
+            <section>
               <div className="flex justify-center mb-6">
                 <Image src={icon1} alt="icon image" className="w-[70px]" />
               </div>
               <h1 className="font-bold mb-2">Near to Subway</h1>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1200">
                 <span className="font-bold text-5xl"><CountUp start={0} end={28} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>min</sub>
@@ -76,12 +76,12 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 2 */}
-            <section data-aos="fade-up" data-aos-duration="1300">
+            <section >
               <div className="flex justify-center mb-6">
                 <Image src={icon2} alt="icon image" className="w-12" />
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1300">
                 <span className="font-bold text-5xl"><CountUp start={0} end={32} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-4xl">
                   <sub>+</sub>
@@ -89,12 +89,12 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 3 */}
-            <section data-aos="fade-up" data-aos-duration="1400">
+            <section >
               <div className="flex justify-center mb-6">
                 <Image src={icon3} alt="icon image" className="w-16" />
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1400">
                 <span className="font-bold text-5xl"><CountUp start={0} end={15} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-3xl">
                   <sub>%</sub>
@@ -102,12 +102,12 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 4 */}
-            <section data-aos="fade-up" data-aos-duration="1500">
+            <section >
               <div className="flex justify-center mb-6">
                 <Image src={icon4} alt="icon image" className="w-16" />
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1500">
                 <span className="font-bold text-5xl"><CountUp start={0} end={3} delay={1} duration={1.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>years</sub>
@@ -115,12 +115,12 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 5 */}
-            <section data-aos="fade-up" data-aos-duration="1600">
+            <section >
               <div className="flex justify-center mb-6">
                 <Image src={icon5} alt="icon image" className="w-16" />
               </div>
               <h1 className="font-bold mb-2">Spaces in Pozniaky</h1>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1600">
                 <span className="font-bold text-5xl"><CountUp start={0} end={79} delay={1} duration={3.75}/></span>
                 <span className="font-bold text-xl">
                   <sub>
