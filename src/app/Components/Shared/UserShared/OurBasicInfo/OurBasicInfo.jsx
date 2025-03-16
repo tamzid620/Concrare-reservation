@@ -1,9 +1,12 @@
-import React from "react";
+"use client" ;
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { playfair, poppins } from "@/config/fonts";
 import icon1 from '@/app/assests/icons/footer-icon01.png' ;
 import icon2 from '@/app/assests/icons/footer-icon02.png' ;
 import icon3 from '@/app/assests/icons/footer-icon03.png' ;
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const basicData = [
     {
@@ -28,14 +31,16 @@ const basicData = [
 
 const OurBasicInfo = () => {
 
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className="bg-white pb-16 lg:hidden md:block sm: block">
       <div
         className={` ${poppins.className} bg-[#CFAF6E] py-12 px-6 lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
       >
-        <div className="grid justify-center lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-10">
+        <div data-aos="zoom-in" data-aos-duration="2000" className="grid justify-center lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-10">
             {
               basicData.map(({icon, title, location, address}, index) => (
                 <div key={index} className="flex items-center gap-5 text-white">

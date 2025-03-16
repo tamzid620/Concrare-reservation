@@ -1,5 +1,5 @@
 'use client' ;
-import React from "react";
+import React, { useEffect } from "react";
 import icon1 from "@/app/assests/icons/icon-benefits01.png";
 import icon2 from "@/app/assests/icons/icon-benefits02.png";
 import icon3 from "@/app/assests/icons/icon-benefits03.png";
@@ -8,6 +8,8 @@ import icon5 from "@/app/assests/icons/icon-benefits05.png";
 import { playfair, poppins } from "@/config/fonts";
 import Image from "next/image";
 import CountUp from "react-countup";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const propertyData = [
   {
@@ -43,20 +45,25 @@ const propertyData = [
 ];
 
 const OurProperty = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="bg-gray-100 py-32 ">
       <div className="lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4">
         <div className={` ${poppins.className} text-center`}>
-          <h1 className={`${playfair.className} text-4xl mb-4 `}>
+          <h1 data-aos="fade-up" data-aos-duration="2000" className={`${playfair.className} text-4xl mb-4 `}>
             {" "}
             <span className="text-[#CFAF6E]">Homepark </span>Property
           </h1>
-          <h2 className="mb-5 font-semibold text-2xl">
+          <h2 data-aos="fade-up" data-aos-duration="2000" className="mb-5 font-semibold text-2xl">
             Decorated Flats in Bangladesh
           </h2>
           <div className="grid lg:grid-cols-5 md:grid-cols-3 sm: grid-cols-1 gap-20 mt-16">
             {/* icon section 1 */}
-            <section>
+            <section data-aos="fade-up" data-aos-duration="1200">
               <div className="flex justify-center mb-6">
                 <Image src={icon1} alt="icon image" className="w-[70px]" />
               </div>
@@ -69,7 +76,7 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 2 */}
-            <section>
+            <section data-aos="fade-up" data-aos-duration="1300">
               <div className="flex justify-center mb-6">
                 <Image src={icon2} alt="icon image" className="w-12" />
               </div>
@@ -82,7 +89,7 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 3 */}
-            <section>
+            <section data-aos="fade-up" data-aos-duration="1400">
               <div className="flex justify-center mb-6">
                 <Image src={icon3} alt="icon image" className="w-16" />
               </div>
@@ -95,7 +102,7 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 4 */}
-            <section>
+            <section data-aos="fade-up" data-aos-duration="1500">
               <div className="flex justify-center mb-6">
                 <Image src={icon4} alt="icon image" className="w-16" />
               </div>
@@ -108,7 +115,7 @@ const OurProperty = () => {
               </p>
             </section>
             {/* icon section 5 */}
-            <section>
+            <section data-aos="fade-up" data-aos-duration="1600">
               <div className="flex justify-center mb-6">
                 <Image src={icon5} alt="icon image" className="w-16" />
               </div>

@@ -3,12 +3,19 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "./OurClients.css";
 import { playfair, poppins } from "@/config/fonts";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const OurClients = () => {
+
   const slideRowRef = useRef(null);
   const mainRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   useEffect(() => {
     const updateSlide = () => {
       if (!slideRowRef.current || !mainRef.current) return;
@@ -26,7 +33,8 @@ const OurClients = () => {
 
   return (
     <div className="py-36 bg-white">
-            <h1 className={`${playfair.className} text-center text-4xl mb-20 `}>
+            <h1 data-aos="zoom-in" data-aos-duration="2000"
+             className={`${playfair.className} text-center text-4xl mb-20 `}>
               {" "}
               <span className="text-[#CFAF6E] ">Our </span> Client
             </h1>
@@ -34,7 +42,7 @@ const OurClients = () => {
         className={` ${poppins.className} lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
       >
         <div className="sectionbody lg:mx-0 md:mx-10">
-          <main className="main" ref={mainRef}>
+          <main data-aos="zoom-in" data-aos-duration="2000" className="main" ref={mainRef}>
 
             <div className="slider">
               <div className="slide-row" id="slide-row" ref={slideRowRef}>
