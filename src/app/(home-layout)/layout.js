@@ -5,7 +5,7 @@ import Footer from "../Components/Shared/UserShared/Footer/Footer";
 import Navbar from "../Components/Shared/UserShared/Navbar/Navbar";
 import "../globals.css";
 
-export default function RootLayout({ children }) {
+const UserLayout = ({ children })  => {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="">
+      <body>
      {loading ? (
           <HomeLoading />
         ) : (
@@ -30,7 +30,8 @@ export default function RootLayout({ children }) {
           </>
         )}
       </body>
-      
     </html>
   );
 }
+
+export default UserLayout ;
