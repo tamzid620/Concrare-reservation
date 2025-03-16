@@ -8,9 +8,9 @@ const HomeLoading = () => {
 
 
     return (
-        <div className='w-full h-screen bg-[#CFAF6E] text-white flex justify-center items-center'>
+        <div className='w-full h-screen bg-[#CFAF6E] text-white flex justify-center items-center '>
              {/* main icon section  */}
-                          <div className={`${playfair.className} flex items-center gap-1`}>
+                          <div className={`${playfair.className} flex items-center gap-1 animate-pulse `}>
                             <p className="">
                               <Image
                                 src={buildingLogo}

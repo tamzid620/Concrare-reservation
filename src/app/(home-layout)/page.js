@@ -1,4 +1,5 @@
 import Banner from "../Components/Shared/UserShared/Banner/Banner";
+import OurBasicInfo from "../Components/Shared/UserShared/OurBasicInfo/OurBasicInfo";
 import OurCertificates from "../Components/Shared/UserShared/OurCertificates/OurCertificates";
 import OurClients from "../Components/Shared/UserShared/OurClients/OurClients";
 import OurExcellence from "../Components/Shared/UserShared/OurExcellence/OurExcellence";
@@ -24,6 +25,7 @@ const Home = () => {
       <OurExcellence/>
       <OurClients/>
       <OurCertificates/>
+      <OurBasicInfo/>
     </main>
   );
 }

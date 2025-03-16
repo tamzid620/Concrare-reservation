@@ -15,31 +15,31 @@ import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
   {
-    title: "Grande By Sanmar",
+    title: "Grande By Concrare",
     type: "Residential",
     location: "Chattogram",
     image: sliderImage1,
   },
   {
-    title: "Sanmar Orchard Garden",
+    title: "Concrare Orchard Garden",
     type: "Residential",
     location: "Chattogram",
     image: sliderImage2,
   },
   {
-    title: "Sanmar Rahim Center",
+    title: "Concrare Rahim Center",
     type: "Commercial",
     location: "Chattogram",
     image: sliderImage3,
   },
   {
-    title: "Grande By Sanmar",
+    title: "Grande By Concrare",
     type: "Residential",
     location: "Chattogram",
     image: sliderImage4,
   },
   {
-    title: "Sanmar Orchard Garden",
+    title: "Concrare Orchard Garden",
     type: "Residential",
     location: "Chattogram",
     image: sliderImage5,
@@ -107,7 +107,7 @@ const OurExcellence = () => {
             >
               <div className="flex justify-center">
                 <Image
-                  className="w-full h-[500px]"
+                  className="w-full h-[500px] bg-[#CFAF6E]"
                   src={project.image}
                   alt="best appartments in Bangladesh "
                 />

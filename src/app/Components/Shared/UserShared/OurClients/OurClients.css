@@ -134,6 +134,9 @@
 }
 /* ------------ medium device --------------------- */
 @media (max-width: 850px) {
+  .sectionbody{
+    width: 96%;
+  }
   .main {
     width: 768px;
     margin-left: -81px;
@@ -152,6 +155,9 @@
 }
 /* ------------ small device --------------------- */
 @media (max-width: 550px) {
+  .sectionbody{
+    width: 96%;
+  }
   .main {
     /* width: 800px; */
     width: 375px;

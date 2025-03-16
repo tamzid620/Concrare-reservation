@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import Image from "next/image";
 import textLogo from "@/app/assests/icons/concrare-main-logo(white).png";
@@ -16,6 +16,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { playfair, poppins } from "@/config/fonts";
 
 const Navbar = () => {
+  const sidebarRef = useRef(null);
   const [viewSidebar, setViewSidebar] = useState(false);
   const [largenavli, setLargenavli] = useState(false);
   const [smallnavli, setSmallnavli] = useState(false);
@@ -29,6 +30,23 @@ const Navbar = () => {
   const toggleSmallNavli = () => {
     setSmallnavli(!smallnavli);
   };
+
+  // Close sidebar effect -----------------------
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setViewSidebar(false);
+      }
+    };
+
+    if (viewSidebar) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [viewSidebar]);
 
   return (
     <nav className={` ${poppins.className} relative  z-10 text-white`}>
@@ -165,6 +183,7 @@ const Navbar = () => {
       </div>
       {/* SideBar-------------------------------------------- */}
       <aside
+      ref={sidebarRef}
         className={`fixed top-0 left-0 h-full bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
         } z-50`}
