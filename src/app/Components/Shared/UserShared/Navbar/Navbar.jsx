@@ -184,7 +184,7 @@ const Navbar = () => {
       {/* SideBar-------------------------------------------- */}
       <aside
       ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] transform transition-transform duration-300 ease-in-out ${
+        className={` fixed top-0 left-0 h-full bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
         } z-50`}
       >

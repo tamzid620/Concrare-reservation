@@ -11,7 +11,7 @@ import OurVIsion from "../Components/Shared/UserShared/OurVIsion/OurVIsion";
 
 export const metadata = {
   title: "Home || Concrare",
-  description: "Developed by marketien",
+  description: "Developers Choices",
 };
 
 const Home = () => {
