@@ -51,7 +51,7 @@ const OurProperty = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 py-32 ">
+    <div className="bg-gray-100 text-black py-32 ">
       <div className="lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4">
         <div className={` ${poppins.className} text-center`}>
           <h1 data-aos="fade-up" data-aos-duration="2000" className={`${playfair.className} text-4xl mb-4 `}>

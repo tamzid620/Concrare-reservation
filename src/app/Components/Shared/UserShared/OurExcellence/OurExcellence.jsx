@@ -95,7 +95,7 @@ const OurExcellence = () => {
   };
 
   return (
-    <div className="py-36 bg-gray-100">
+    <div className="py-36 bg-gray-100  text-black ">
       <div
         className={` ${poppins.className} lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
       >

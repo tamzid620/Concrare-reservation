@@ -1,3 +1,4 @@
+import './Home.css'
 import Banner from "../Components/Shared/UserShared/Banner/Banner";
 import OurBasicInfo from "../Components/Shared/UserShared/OurBasicInfo/OurBasicInfo";
 import OurCertificates from "../Components/Shared/UserShared/OurCertificates/OurCertificates";
@@ -16,7 +17,7 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <main className="-mt-[160px]">
+    <main className=" home-body">
       <Banner />
       <OurProject/>
       <OurProperty/>

@@ -32,7 +32,7 @@ const OurClients = () => {
   }, [currentIndex]);
 
   return (
-    <div className="py-36 bg-white">
+    <div className="py-36 bg-white text-black ">
             <h1 data-aos="zoom-in" data-aos-duration="2000"
              className={`${playfair.className} text-center text-4xl mb-20 `}>
               {" "}

@@ -14,6 +14,7 @@ import socialmedia2 from "@/app/assests/icons/instagram.png";
 import socialmedia3 from "@/app/assests/icons/linkedin.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { playfair, poppins } from "@/config/fonts";
+import Link from "next/link";
 
 const Navbar = () => {
   const sidebarRef = useRef(null);
@@ -56,27 +57,31 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             <section>
               {/* main icon section  */}
-              <div className={`${playfair.className} flex items-center gap-1`}>
-                <p className="">
-                  <Image
-                    src={buildingLogo}
-                    alt="building logo"
-                    className="w-[60px]"
-                  />
-                </p>
-                <p className="relative ">
-                  <span>
+              <Link href="/">
+                <div
+                  className={`${playfair.className} flex items-center gap-1`}
+                >
+                  <p className="">
                     <Image
-                      src={textLogo}
+                      src={buildingLogo}
                       alt="building logo"
-                      className="relative w-[150px]"
+                      className="w-[60px]"
                     />
-                  </span>
-                  <span className="absolute top-8 ms-2 text-white">
-                    Creative Houses
-                  </span>
-                </p>
-              </div>
+                  </p>
+                  <p className="relative ">
+                    <span>
+                      <Image
+                        src={textLogo}
+                        alt="building logo"
+                        className="relative w-[150px]"
+                      />
+                    </span>
+                    <span className="absolute top-8 ms-2 text-white">
+                      Creative Houses
+                    </span>
+                  </p>
+                </div>
+              </Link>
             </section>
             <section className="flex items-center gap-6">
               {/* number section  */}
@@ -116,8 +121,12 @@ const Navbar = () => {
           {/* nav ul  */}
           <div>
             <ul className="flex justify-end gap-10 py-2">
-              <li>Home</li>
-              <li>About</li>
+              <Link href="/">
+                <li>Home</li>
+              </Link>
+              <Link href="/about">
+                <li>About</li>
+              </Link>
               <li
                 onClick={toggleLargeNavli}
                 className="flex items-center gap-1 relative group"
@@ -139,15 +148,18 @@ const Navbar = () => {
               ) : (
                 <></>
               )}
-              <li>Contact</li>
+              <Link href="contact">
+                <li>Contact</li>
+              </Link>
             </ul>
           </div>
         </div>
-        {/* small device  */}
+        {/* SMALL DEVICE   */}
         <div className="md:hidden sm: block px-3 py-3">
-            <div className="flex justify-between items-center">
-{/* main icon section  */}
-<div className={`${playfair.className} flex items-center gap-0`}>
+          <div className="flex justify-between items-center">
+            {/* main icon section  */}
+            <Link href="/">
+              <div className={`${playfair.className} flex items-center gap-0`}>
                 <p className="">
                   <Image
                     src={buildingLogo}
@@ -155,7 +167,7 @@ const Navbar = () => {
                     className="w-[50px]"
                   />
                 </p>
-                <p className="relative ">
+                <p className="relative">
                   <span>
                     <Image
                       src={textLogo}
@@ -168,22 +180,23 @@ const Navbar = () => {
                   </span>
                 </p>
               </div>
-{/* menu button  */}
-{/* menu icon  */}
-<div>
-                <Image
-                  onClick={toggleSidebar}
-                  src={menuLogo}
-                  alt="building logo"
-                  className="w-[30px] pt-3 shadow-[#CFAF6E] hover:shadow-lg"
-                />
-              </div>
+            </Link>
+            {/* menu button  */}
+            {/* menu icon  */}
+            <div>
+              <Image
+                onClick={toggleSidebar}
+                src={menuLogo}
+                alt="building logo"
+                className="w-[30px] pt-3 shadow-[#CFAF6E] hover:shadow-lg"
+              />
             </div>
+          </div>
         </div>
       </div>
       {/* SideBar-------------------------------------------- */}
       <aside
-      ref={sidebarRef}
+        ref={sidebarRef}
         className={` fixed top-0 left-0 h-full bg-gray-900 w-[350px] shadow-md shadow-[#CFAF6E] transform transition-transform duration-300 ease-in-out ${
           viewSidebar ? "translate-x-0" : "-translate-x-full"
         } z-50`}
@@ -271,36 +284,44 @@ const Navbar = () => {
                   />
                 </span>
               </div>
-              <p className="text-xs">© 2019 Concrare | Real Estate & Luxury Homes</p>
+              <p className="text-xs">
+                © 2019 Concrare | Real Estate & Luxury Homes
+              </p>
             </div>
             {/* small device sidebar  */}
             <div>
-{/* nav ul  */}
-<div className="md:hidden sm: block">
-            <ul className="leading-[50px] py-2 sidebar-ul">
-              <li>Home</li>
-              <li>About</li>
-              <li
-                onClick={toggleSmallNavli}
-                className="flex items-center gap-1 relative group"
-              >
-                Project <IoMdArrowDropdown />
-              </li>
-              {smallnavli ? (
-                <div className="bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center leading-10">
-                    <ul>
-                      <li>Residential</li>
-                      <li>Collections</li>
-                      <li>Commercial</li>
-                      <li>For Rental</li>
-                    </ul>
-                </div>
-              ) : (
-                <></>
-              )}
-              <li>Contact</li>
-            </ul>
-          </div>
+              {/* nav ul  */}
+              <div className="md:hidden sm: block">
+                <ul className="leading-[50px] py-2 sidebar-ul">
+                  <Link href="/">
+                    <li>Home</li>
+                  </Link>
+                  <Link href="/about">
+                    <li>About</li>
+                  </Link>
+                  <li
+                    onClick={toggleSmallNavli}
+                    className="flex items-center gap-1 relative group"
+                  >
+                    Project <IoMdArrowDropdown />
+                  </li>
+                  {smallnavli ? (
+                    <div className="bg-gray-900 shadow-[#CFAF6E] shadow-md w-44 py-3 text-center leading-10">
+                      <ul>
+                        <li>Residential</li>
+                        <li>Collections</li>
+                        <li>Commercial</li>
+                        <li>For Rental</li>
+                      </ul>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                  <Link href="contact">
+                    <li>Contact</li>
+                  </Link>
+                </ul>
+              </div>
             </div>
           </div>
         ) : (

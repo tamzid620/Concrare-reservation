@@ -36,7 +36,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 -mt-[160px]">
       <ImagesSlider
         className="h-screen w-full"
         images={slides.map((s) => s.image)}

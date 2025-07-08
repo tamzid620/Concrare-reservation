@@ -36,7 +36,7 @@ const OurBasicInfo = () => {
   }, []);
 
   return (
-    <div className="bg-white pb-16 lg:hidden md:block sm: block">
+    <div className="bg-white text-black pb-16 lg:hidden md:block sm: block">
       <div
         className={` ${poppins.className} bg-[#CFAF6E] py-12 px-6 lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
       >
