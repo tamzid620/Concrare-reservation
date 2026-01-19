@@ -21,13 +21,13 @@ const OurProject = () => {
           <Image
           data-aos="fade-up-right" data-aos-duration="1800"
             src={sidePattern}
-            
+            alt="side pattern background"
             className="bg-[#CFAF6E] relative "
           />
           <Image
             src={sideImage}
             data-aos="fade-up-right" data-aos-duration="2000"
-            
+            alt="side image"
             className="absolute lg:-top-20 md:top-0 sm: top-0 lg:left-20 shadow-2xl"
           />
         </section>
