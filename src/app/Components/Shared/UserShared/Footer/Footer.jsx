@@ -11,6 +11,7 @@ import icon1 from "@/app/assests/icons/footer-icon01.png";
 import icon2 from "@/app/assests/icons/footer-icon02.png";
 import icon3 from "@/app/assests/icons/footer-icon03.png";
 const Footer = () => {
+
   const navul1 = [
     {
       path: "/",
@@ -33,6 +34,7 @@ const Footer = () => {
       title: "Contact",
     },
   ];
+
   const navul2 = [
     {
       path: "/",
@@ -184,7 +186,7 @@ const Footer = () => {
                 {/* <<<<<<<<<<<<<<<<<<<<<<<<< LOGO MAIN PART >>>>>>>>>>>>>>>>>>>>>>>> */}
         <main className="absolute lg:-top-28 lg:block md:hidden sm: hidden">
           <div
-            className={` ${poppins.className} bg-[#CFAF6E] py-12 px-6 lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
+            className={` ${poppins.className} bg-[#CFAF6E] py-12 px-6 lg:w-[1210px] md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
           >
             <div className="grid justify-center lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-10">
               {basicData.map(({ icon, title, location, address }, index) => (

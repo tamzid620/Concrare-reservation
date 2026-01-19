@@ -97,7 +97,7 @@ const OurExcellence = () => {
   return (
     <div className="py-36 bg-gray-100  text-black ">
       <div
-        className={` ${poppins.className} lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-auto md:mx-6 sm: mx-4 `}
+        className={` ${poppins.className} lg:max-w-7xl md:max-w-full sm:max-w-full lg:mx-8 md:mx-6 sm: mx-4 `}
       >
         <h1 data-aos="zoom-in" data-aos-duration="2000"
          className={`${playfair.className} text-4xl mb-4 `}>

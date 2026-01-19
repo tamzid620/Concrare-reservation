@@ -12,7 +12,7 @@ const OurVIsion = () => {
     return (
         <div  className="relative w-full py-36 flex justify-center items-center ">
             <div className='absolute bg-black opacity-60 inset-0 '/>
-           <div className="relative lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-auto  md:mx-6 sm: mx-4 text-center text-white">
+           <div className="relative lg:max-w-7xl md:max-w-full sm: max-w-full lg:mx-8  md:mx-6 sm: mx-4 text-center text-white">
                 <h1 data-aos="zoom-in" data-aos-duration="2000"
                  className={`${playfair.className} text-6xl leading-[70px]`}>
                <p> A Vision For</p> 
